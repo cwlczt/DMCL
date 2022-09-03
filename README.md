@@ -29,7 +29,7 @@ DMCL is a cancer subtype framework based on multi-omics cancer datasets. The fol
    
 **Input and Output Directories**
 
-   The datasets used by the program are in the ```data``` folder. The output files are under the ```result``` folder and separated by the name of the dataset. i.e the results of the liver are in ```result/liver/```. The output is Matlab files, where the label variable is the predicted label.
+   The datasets used by the program are in the ```data``` folder. The output files are under the ```result``` folder and separated by the name of the dataset. i.e the results of the liver are in ```result/liver/```. 
    
 **Contact**
 
