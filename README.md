@@ -15,7 +15,7 @@ DMCL is a cancer subtype framework based on multi-omics cancer datasets. The fol
 
 **Requirements**
 
-  >= Python 3.7.9
+    >= Python 3.7.9
 
 **Usage**
 
