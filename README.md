@@ -9,6 +9,7 @@ DMCL is a cancer subtype framework based on multi-omics cancer datasets. The fol
     pretrainModel.py: A pre_training file for the model
     networkModels.py: The architecture designed in the paper
     modelLoss.py: The losses in architecture
+    utils.py: The file for saving model
     DMCL.py: The main file for execution
     
     
