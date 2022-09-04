@@ -14,9 +14,7 @@ DMCL is a deep multi-view contrastive learning framework for cancer subtype iden
     
 **DMCL Model**
 
-[Image text]!
-
-(https://github.com/cwlczt/DMCL/blob/main/image/framework.jpg)
+<div align=center><img src="image/framework.jpg" width = "70%"/></div>
 
 **Requirements**
 
