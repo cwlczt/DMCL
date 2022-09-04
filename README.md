@@ -12,7 +12,8 @@ DMCL is a deep multi-view contrastive learning framework for cancer subtype iden
     utils.py: The file for saving model
     DMCL.py: The main file for execution
     
-    
+**DMCL Model**
+[image text]!
 
 **Requirements**
 
