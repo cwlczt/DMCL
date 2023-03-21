@@ -29,7 +29,7 @@ DMCL is a deep multi-view contrastive learning framework for cancer subtype iden
 
 **Input and Output Directories**
 
-   The datasets used by the program are in the ```data``` folder. The output files are under the ```result``` folder and separated by the name of the dataset. i.e the results of the liver are in ```result/liver/```. 
+   The datasets used by the program are in the ```data``` folder. The output files are under the ```result``` folder and separated by the name of the dataset. i.e the results of the breast are in ```result/breast/```. 
    
 **Contact**
 
