@@ -27,22 +27,12 @@ def parse_option():
     parser.add_argument('--pretrain_path', type=str, default='pretrain_models')
     parser.add_argument('--pretrain_epoch', type=int, default=200)
     parser.add_argument('--temperature', type=float, default=0.5)
-    parser.add_argument('--seed', type=int, default=74)
+    parser.add_argument('--seed', type=int, default=1073)
     parser.add_argument('--early_stopping_pretraining', type=int, default=20)
     parser.add_argument('--early_stopping_training', type=int, default=50)
     parser.add_argument('--max_iter',type = int,default=2000)
     parser.add_argument('--result_models',type = str,default='result_models')
     parser.add_argument('--result_mat',type = str,default='result')
-    parser.add_argument(
-        '--gamma',
-        default= 1,
-        type=float,
-        help='coefficient of clustering loss')
-    parser.add_argument(
-        '--beta',
-        default= 1,
-        type=float,
-        help='coefficient of constrastive loss')
     parser.add_argument('--update_interval', default=5, type=int)
     parser.add_argument('--tol', default=0.00001, type=float)
     args = parser.parse_args()
@@ -139,7 +129,7 @@ def train_model(require_pretrain=False,fix_seed = True):
 
             cl_loss = constLoss(model.getHidden_separate(x))
 
-            loss = recon_loss + opts.gamma * kl_loss + opts.beta * cl_loss
+            loss = recon_loss + kl_loss +  cl_loss
 
             optimizer.zero_grad()
             loss.backward()
@@ -172,10 +162,9 @@ def train_model(require_pretrain=False,fix_seed = True):
     opts.result_mat = opts.result_mat +f'_{is_break}'
     savemat(opts.result_mat+'.mat',{'label':y_pred})
 if __name__ == '__main__':
-    n_cluster = 4
-    dataset_name = 'liver'
+    os.environ["CUDA_VISIBLE_DEVICES"] = '3'
+    n_cluster = 3
+    dataset_name = 'breast'
     opts = parse_option()
     print(opts)
     train_model(require_pretrain=True, fix_seed = True)
-
-
