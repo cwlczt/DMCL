@@ -27,7 +27,7 @@ def parse_option():
     parser.add_argument('--pretrain_path', type=str, default='pretrain_models')
     parser.add_argument('--pretrain_epoch', type=int, default=200)
     parser.add_argument('--temperature', type=float, default=0.5)
-    parser.add_argument('--seed', type=int, default=1073)
+    parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--early_stopping_pretraining', type=int, default=20)
     parser.add_argument('--early_stopping_training', type=int, default=50)
     parser.add_argument('--max_iter',type = int,default=2000)
