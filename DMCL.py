@@ -35,12 +35,12 @@ def parse_option():
     parser.add_argument('--result_mat',type = str,default='result')
     parser.add_argument(
         '--gamma',
-        default= gamma,
+        default= 1,
         type=float,
         help='coefficient of clustering loss')
     parser.add_argument(
         '--beta',
-        default= beta,
+        default= 1,
         type=float,
         help='coefficient of constrastive loss')
     parser.add_argument('--update_interval', default=5, type=int)
@@ -174,8 +174,6 @@ def train_model(require_pretrain=False,fix_seed = True):
 if __name__ == '__main__':
     n_cluster = 4
     dataset_name = 'liver'
-    gamma = 1
-    beta = 0.1
     opts = parse_option()
     print(opts)
     train_model(require_pretrain=True, fix_seed = True)
